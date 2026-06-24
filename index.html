@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
+
 <body>
     <header class="main-header">
         <div class="header-top">
@@ -30,10 +32,73 @@
                 <a href="#">Education</a>
                 <a href="#">Suppprt</a>
             </nav>
-            <a href="#" class="header-search"><i class="fa-solid fa-magnifying-glass"></i></a>
+            <a href="#" class="header-search" id="searchBtn"><i class="fa-solid fa-magnifying-glass"></i></a>
+        </div>
+        <div class="search-box" id="searchBox">
+            <input type="text" placeholder="search acer.com">
         </div>
     </header>
 
+    <section class="hero-carousel">
+        <button class="carousel-btn prev-btn">
+            <i class="fa-solid fa-chevron-left"></i>
+        </button>
+        <div class="slide  slide-1 active">
+            <div class="slide-content">
+                <h1>Explore. Evolve. Aspire.</h1>
+                <p>Copilot+ PCs are the fastest, most intelligent Windows PCs ever.</p>
+                <a href="#" class="hero-btn">Copilot+Pc</a>
+            </div>
+        </div>
+        <div class="slide slide-2">
+            <div class="slide-content">
+                <h1>Explore. Evolve. Aspire.</h1>
+                <p>Acer Aspire 14 AI | Acer Aspire 16 AI</p>
+                <a href="#" class="hero-btn">Explore</a>
+            </div>
+        </div>
+        <div class="slide slide-3">
+            <div class="slide-content">
+                <h1>The Future is Here</h1>
+                <p>Celebrate 50 years with Acer and discover the latest innovations unveiled at COMPUTEX 2026.</p>
+                <a href="#" class="hero-btn">Explore</a>
+            </div>
+        </div>
+        <button class="carousel-btn next-btn">
+            <i class="fa-solid fa-chevron-right"></i>
+        </button>
+        <div class="carousel-dots">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+    </section>
+    
+    <section class="categories">
+        <h1>Brows Popular Categories</h1>
+        <div class="category-list">
+            <div class="category-item">
+                <a href="#"><img src="images/cat-1.avif" alt=""></a>
+                <a href="#">Laptop</a>
+            </div>
+            <div class="category-item">
+                <a href="#"><img src="images/cat-2.avif" alt=""></a>
+                <a href="#">Desktops</a>
+            </div>
+            <div class="category-item">
+                <a href="#"><img src="images/cat-3.avif" alt=""></a>
+                <a href="#">Monitors</a>
+            </div>
+            <div class="category-item">
+                <a href="#"><img src="images/cat-4.avif" alt=""></a>
+                <a href="#">Acer ChromeBooks</a>
+            </div>
+            <div class="category-item">
+                <a href="#"><img src="images/cat-5.avif" alt=""></a>
+                <a href="#">Graphics Cards</a>
+            </div>
+        </div>
+    </section>
 
 
 
@@ -41,4 +106,5 @@
 
     <script src="js/main.js"></script>
 </body>
+
 </html>
