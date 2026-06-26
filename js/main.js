@@ -2,9 +2,9 @@ let searchBtn = document.getElementById("searchBtn");
 let searchBox = document.getElementById("searchBox");
 
 searchBtn.addEventListener("click", function (e) {
-    e.preventDefault();
-    searchBox.classList.toggle("active");
-    searchBtn.classList.toggle("active");
+  e.preventDefault();
+  searchBox.classList.toggle("active");
+  searchBtn.classList.toggle("active");
 });
 
 let slides = document.querySelectorAll(".slide");
@@ -49,3 +49,17 @@ for (let i = 0; i < dots.length; i++) {
     showSlide(i);
   };
 }
+
+let track = document.querySelector('.track');
+let items = document.querySelectorAll('.item');
+let i = 0;
+
+document.querySelector('.next').onclick = () => {
+  if (i < items.length - 3) i++;
+  track.style.transform = `translateX(-${i * 33.333}%)`;
+};
+
+document.querySelector('.prev').onclick = () => {
+  if (i > 0) i--;
+  track.style.transform = `translateX(-${i * 33.333}%)`;
+};
