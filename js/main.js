@@ -50,16 +50,31 @@ for (let i = 0; i < dots.length; i++) {
   };
 }
 
-let track = document.querySelector('.track');
-let items = document.querySelectorAll('.item');
-let i = 0;
+let track = document.querySelector(".track");
+let items = document.querySelectorAll(".item");
+let next = document.querySelector(".next");
+let prev = document.querySelector(".prev");
 
-document.querySelector('.next').onclick = () => {
-  if (i < items.length - 3) i++;
-  track.style.transform = `translateX(-${i * 33.333}%)`;
+let i = 0;
+let step = 33.333;
+
+function moveCarousel() {
+    track.style.transform = `translateX(-${i * step}%)`;
+}
+
+next.onclick = function () {
+    if (window.innerWidth <= 768) {
+        if (i < items.length - 1) i++;
+        step = 100;
+    } else {
+        if (i < items.length - 3) i++;
+        step = 33.333;
+    }
+
+    moveCarousel();
 };
 
-document.querySelector('.prev').onclick = () => {
-  if (i > 0) i--;
-  track.style.transform = `translateX(-${i * 33.333}%)`;
+prev.onclick = function () {
+    if (i > 0) i--;
+    moveCarousel();
 };
